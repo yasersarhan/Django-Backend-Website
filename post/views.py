@@ -9,6 +9,7 @@ def post_list(request):
 
 
 
-def post_detail(request):
-    pass
+def post_detail(request,id):
+    post = Post.objects.get(id=id)
+    return render(request,'post.html',{'post':post})
 
